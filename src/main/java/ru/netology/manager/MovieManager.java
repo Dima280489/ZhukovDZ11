@@ -1,4 +1,5 @@
 package ru.netology.manager;
+
 public class MovieManager {
     private String[] movies = new String[0];
     private int limit;
@@ -7,11 +8,11 @@ public class MovieManager {
         this.limit = 6;
     }
 
-    public MovieManager (int limit) {
+    public MovieManager(int limit) {
         this.limit = limit;
     }
 
-    public void addMovie (String movie) {
+    public void addMovie(String movie) {
         String[] tmp = new String[movies.length + 1];
         for (int i = 0; i < movies.length; i++) {
             tmp[i] = movies[i];
@@ -28,13 +29,12 @@ public class MovieManager {
         int resultLength;
         if (movies.length < limit) {
             resultLength = movies.length;
-        }
-        else {
+        } else {
             resultLength = limit;
         }
         String[] tmp = new String[resultLength];
         for (int i = 0; i < movies.length; i++) {
-            tmp[i] = movies[movies.length - 1 -i];
+            tmp[i] = movies[movies.length - 1 - i];
         }
         return tmp;
     }
