@@ -24,7 +24,7 @@ public class MovieManagerTest {
     @Test
     public void twoFilms() {
         MovieManager manager = new MovieManager();
-        
+
         manager.addMovie(Film1);
 
         String[] expected = {Film1};
